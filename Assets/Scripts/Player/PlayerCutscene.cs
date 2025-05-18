@@ -29,6 +29,16 @@ public class PlayerCutscene : MonoBehaviour
         StartCoroutine("Move");
     }
 
+    void Update()
+    {
+#if UNITY_ANDROID
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+#endif
+    }
+
     //default state coroutine
     IEnumerator Move()
     {

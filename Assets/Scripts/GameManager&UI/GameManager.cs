@@ -85,6 +85,13 @@ public class GameManager : MonoBehaviour
                 timer.color = Color.white;
             }
         }
+
+#if UNITY_ANDROID
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+#endif
     }
 
     public void OnPlayerDead()

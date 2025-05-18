@@ -9,10 +9,7 @@ public class Admob : MonoBehaviour
     // These ad units are configured to always serve tes ads.
 
 #if UNITY_ANDROID
-    private string _adUnitId = "ca-app-pub-3940256099942544/1033173712"; // google admob test id for android
-    // private string _adUnitId = "ca-app-pub-8815243120943688/4289599066"; // google admob id for android
-#elif UNITY_IPHONE
-    private string _adUnitId = "ca-app-pub-3940256099942544/4411468910"; // google admob test id for ios
+    [SerializeField] string _adUnitId; // google admob id for android
 #else
     private string _adUnitId = "unused";
 #endif

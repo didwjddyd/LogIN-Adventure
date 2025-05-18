@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -101,9 +100,19 @@ public class SelectSceneHandler : MonoBehaviour
     string selectedStage;
     string itemPageNum;
 
-    private void Start()
+    void Start()
     {
         OnStage1Button(false);
+    }
+
+    void Update()
+    {
+#if UNITY_ANDROID
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+#endif
     }
 
     void SetStar(int n)

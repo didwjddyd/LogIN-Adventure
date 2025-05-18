@@ -5,12 +5,11 @@ using UnityEngine.Advertisements;
 
 public class UnityAdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnityAdsLoadListener, IUnityAdsShowListener 
 {
-    const string _androidGameId = "5657315";
-    const string _iOSGameId = "5657314";
-
-    [SerializeField] bool _testMode = true;
-    [SerializeField] string _androidAdUnitId = "Interstitial_Android";
-    [SerializeField] string _iOSAdUnitId = "Interstitial_iOS";
+    [SerializeField] string _androidGameId;
+    [SerializeField] string _iOSGameId;
+    [SerializeField] bool _testMode;
+    [SerializeField] string _androidAdUnitId;
+    [SerializeField] string _iOSAdUnitId;
 
     private string _gameId;
     string _adUnitId;
